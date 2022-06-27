@@ -5,8 +5,10 @@
 	--secondary-color: #1c3fa8;
 	--dark-color: #002240;
 	--light-color: #f4f4f4;
+	--less-color: #e6e6fa;
 	--success-clor: #5cb85c;
 	--error-color: #d9534f;
+	--darker-color: #21261e;
 }
 
 * {
@@ -60,9 +62,9 @@ pre {
 /* Navbar*/
 
 .navbar {
-	background-color: var(--primary-color);
+	background-color: var(--darker-color);
 	color: #fff;
-	height: 70px;
+	height: 100px;
 }
 
 .navbar ul {
@@ -84,6 +86,35 @@ pre {
 }
 
 /* Showcase */
+.showcase-search {
+	height: 200px;
+	background-color: var(--less-color);
+	color: #fff;
+}
+
+form {
+  width: 500px;
+  margin: auto;
+  padding-top: 50px;
+}
+input {
+  padding: 4px 10px;
+	height: 40px;
+  border: 5px;
+	border-radius: 30px;
+  font-size: 16px;
+}
+
+.search {
+  width: 75%;
+}
+
+.submit {
+  width: 90px;
+  background-color: #1c87c9;
+  color: #ffffff;
+}
+
 .showcase {
 	height: 400px;
 	background-color: var(--primary-color);
