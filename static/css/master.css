@@ -87,9 +87,10 @@ pre {
 
 /* Showcase */
 .showcase-search {
-	height: 200px;
+	height: 5px;
 	background-color: var(--less-color);
 	color: #fff;
+	padding-bottom: 20%;
 }
 
 form {
@@ -129,8 +130,12 @@ input {
 .banner {
 	max-width: 100%;
 	height: 100%;
-	margin-bottom: 30%;
 	background-color: var(--less-color);
+}
+
+.sort {
+	display: flex;
+	float: right;
 }
 
 .showcase {
