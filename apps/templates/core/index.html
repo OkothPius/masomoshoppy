@@ -29,10 +29,41 @@
 
 	<!-- Buttons -->
 	<section class="showcase-search">
-		<form action="/form/submit" method="GET">
-		  <input type="text" name="text" class="search" placeholder="Search here!">
-		  <input type="submit" name="submit" class="submit" value="Search">
-		</form>
+		<div class="container">
+			<form action="/form/submit" method="GET">
+				<input type="text" name="text" class="search" placeholder="Search here!">
+				<input type="submit" name="submit" class="submit" value="Search">
+			</form>
+
+			<div class="ttons mt-4">
+				<div class="inner">
+					<a href="#" class="btn btn-dark">Text Books</a>
+				</div>
+				<div class="inner">
+					<a href="#" class="btn btn-dark">Stationary</a>
+				</div>
+				<div class="inner">
+					<a href="#" class="btn btn-dark">Uniforms</a>
+				</div>
+				<div class="inner">
+					<a href="#" class="btn btn-dark">Electronics</a>
+				</div>
+				<div class="inner">
+					<a href="#" class="btn btn-dark">Music Equipment</a>
+				</div>
+				<div class="inner">
+					<a href="#" class="btn btn-dark">Sport Accessories</a>
+				</div>
+			</div>
+
+			<img style="width: 245px; height: 247px;" src="{% static "images/banner.png" % }" alt="">
+
+		</div>
+
+	</section>
+
+	<section class="banner">
+		<img src="{% static 'images/banner.png'% }" alt="">
 
 	</section>
 
