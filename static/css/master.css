@@ -111,6 +111,10 @@ input {
   width: 75%;
 }
 
+.search-case input:focus {
+	outline: none;
+}
+
 .submit {
   width: 90px;
   background-color: var(--dark-color);
