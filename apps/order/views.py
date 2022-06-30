@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from cart.cart import Cart
+from apps.cart.cart import Cart
 from .models import OrderItem
 from .forms import OrderCreateForm
 
