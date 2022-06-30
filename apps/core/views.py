@@ -5,8 +5,6 @@ from .models import Category, Product
 def index(request):
     return render(request, 'core/index.html')
 
-
-
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
