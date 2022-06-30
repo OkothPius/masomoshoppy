@@ -1,411 +1,382 @@
+{% extends "base/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Masomo Shop | Shopping For Everyone</title>
-	<link rel="stylesheet" href="{% static "css/utilities.css" %}">
-  <link rel="stylesheet" href="{% static "css/master.css" %}">
-</head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-	<!-- Navbar -->
-	<div class="navbar">
-		<div class="container flex">
-			<h1 class="logo">Masomo Shop.</h1>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="index.html">Sign In</a></li>
-					<li><a href="features.html">Cart</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!-- Updates -->
+{% block content %}
+
+<h2 class="md text-center my-2">
+    Electronics
+</h2>
+
+<!-- Buttons -->
+<section class="showcase-search">
+    <div class="container">
+        <div class="search-case">
+            <form action="/form/submit" method="GET">
+                <input type="text" name="text" class="search" placeholder="Search here!">
+                <input type="submit" name="submit" class="submit" value="Search">
+            </form>
+        </div>
+
+
+        <div class="ttons mt-4">
+            <div class="inner">
+                <a href="#" class="btn btn-dark">Calculators</a>
+            </div>
+            <div class="inner">
+                <a href="#" class="btn btn-dark">Desktop & Monitors</a>
+            </div>
+            <div class="inner">
+                <a href="#" class="btn btn-dark">Printers & Scanners</a>
+            </div>
+            <div class="inner">
+                <a href="#" class="btn btn-dark">LCD Projectors</a>
+            </div>
+            <div class="inner">
+                <a href="#" class="btn btn-dark">Laptops</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="container banner">
+    <img src="{% static '/images/shipping.jpg' %}" alt="image">
+</div>
+
+<!-- Laptops -->
+<section class="languages">
+    <div class=" container flex sort">
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by most popular</a>
+        </div>
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by Price</a>
+        </div>
+    </div>
 
     <h2 class="md text-center my-2">
-        Electronics
+        Laptops
     </h2>
 
-	<!-- Buttons -->
-	<section class="showcase-search">
-		<div class="container">
-			<div class="search-case">
-				<form action="/form/submit" method="GET">
-					<input type="text" name="text" class="search" placeholder="Search here!">
-					<input type="submit" name="submit" class="submit" value="Search">
-				</form>
-			</div>
-			
+    <div class="row flex my-4">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
 
-			<div class="ttons mt-4">
-				<div class="inner">
-					<a href="#" class="btn btn-dark">Calculators</a>
-				</div>
-				<div class="inner">
-					<a href="#" class="btn btn-dark">Desktop & Monitors</a>
-				</div>
-				<div class="inner">
-					<a href="#" class="btn btn-dark">Printers & Scanners</a>
-				</div>
-				<div class="inner">
-					<a href="#" class="btn btn-dark">LCD Projectors</a>
-				</div>
-				<div class="inner">
-					<a href="#" class="btn btn-dark">Laptops</a>
-				</div>
-			</div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
 
-		</div>
-	</section>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
 
-	<div class="container banner">
-		<img src="{% static '/images/shipping.jpg' %}" alt="image">
-	</div>
-
-	<!-- Laptops -->
-	<section class="languages">
-		<div class=" container flex sort">
-			<div class="inner">
-				<a href="#" class="btn btn-dark">Sort by most popular</a>
-			</div>
-			<div class="inner">
-				<a href="#" class="btn btn-dark">Sort by Price</a>
-			</div>
-		</div>
-
-	<h2 class="md text-center my-2">
-		Laptops
-	</h2>
-
-	<div class="row flex my-4">
-		<div class="col-sm-3">
-			<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Name</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Add to Cart</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="col-sm-3">
-			<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Name</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Add to Cart</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="col-sm-3">
-			<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Name</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Add to Cart</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="col-sm-3">
-			<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Name</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Add to Cart</a>
-			</div>
-		</div>
-		</div>
-	</div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Calculator -->
 <section class="languages">
-	<div class=" container flex sort">
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by brand</a>
-		</div>
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by price</a>
-		</div>
-	</div>
-
-<h2 class="md text-center my-2">
-	Calculators
-</h2>
-
-<div class="row flex my-4">
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class=" container flex sort">
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by brand</a>
+        </div>
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by price</a>
         </div>
     </div>
-    </div>
 
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <h2 class="md text-center my-2">
+        Calculators
+    </h2>
+
+    <div class="row flex my-4">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-</div>
 </section>
 
 <section class="cloud">
-	<div class="container grid">
-		<img src="{% static '/images/book.jpeg' %}" alt="book">
-		<img src="{% static '/images/stationary.jpg' %}" alt="Stationary">
-	</div>
+    <div class="container grid">
+        <img src="{% static '/images/book.jpeg' %}" alt="book">
+        <img src="{% static '/images/stationary.jpg' %}" alt="Stationary">
+    </div>
 </section>
 
 <!-- Desktops & Monitors -->
 <section class="languages">
-	<div class=" container flex sort">
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by brand</a>
-		</div>
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by price</a>
-		</div>
-	</div>
-
-<h2 class="md text-center my-2">
-	Desktops & Monitors
-</h2>
-
-<div class="row flex my-4">
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class=" container flex sort">
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by brand</a>
+        </div>
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by price</a>
         </div>
     </div>
-    </div>
 
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <h2 class="md text-center my-2">
+        Desktops & Monitors
+    </h2>
+
+    <div class="row flex my-4">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-</div>
 </section>
 
 <!-- Printers & Scanners -->
 <section class="languages">
-	<div class=" container flex sort">
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by brand</a>
-		</div>
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by price</a>
-		</div>
-	</div>
-
-<h2 class="md text-center my-2">
-	Printers & Scanners
-</h2>
-
-<div class="row flex my-4">
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class=" container flex sort">
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by brand</a>
+        </div>
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by price</a>
         </div>
     </div>
-    </div>
 
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <h2 class="md text-center my-2">
+        Printers & Scanners
+    </h2>
+
+    <div class="row flex my-4">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-</div>
 </section>
 
 <!-- LCD Projectors -->
 <section class="languages">
-	<div class=" container flex sort">
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by brand</a>
-		</div>
-		<div class="inner">
-			<a href="#" class="btn btn-dark">Sort by set price</a>
-		</div>
-	</div>
-
-<h2 class="md text-center my-2">
-	LCD Projectors
-</h2>
-
-<div class="row flex my-4">
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class=" container flex sort">
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by brand</a>
+        </div>
+        <div class="inner">
+            <a href="#" class="btn btn-dark">Sort by set price</a>
         </div>
     </div>
-    </div>
 
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
+    <h2 class="md text-center my-2">
+        LCD Projectors
+    </h2>
+
+    <div class="row flex my-4">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-
-    <div class="col-sm-3">
-        <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Name</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-    </div>
-    </div>
-</div>
 </section>
 
-<!-- Footer -->
-<footer class="footer bg-dark py-5">
-    <div class="container grid grid-3">
-        <div>
-            <h1>Masomo Shop</h1>
-            <p>Copyright &copy; 2022</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Location 430-985 Moi Avenue Nrb</a></li>
-                <li><a href="features.html">Terms and conditions</a></li>
-                <li><a href="docs.html">About Us</a></li>
-            </ul>
-        </nav>
-        <div class="social">
-            <a href=""><i class="fab fa-github fa-2x"></i></a>
-            <a href=""><i class="fab fa-twitter fa-2x"></i></a>
-            <a href=""><i class="fab fa-instagram fa-2x"></i></a>
-            <a href=""><i class="fab fa-facebook fa-2x"></i></a>
-            <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{% endblock %}
