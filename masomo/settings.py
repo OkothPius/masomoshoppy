@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'apps.core',
     'apps.order',
     'apps.coupon',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +121,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
+
+CART_SESSION_ID = 'cart'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
