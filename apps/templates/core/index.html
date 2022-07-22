@@ -12,27 +12,28 @@
             </form>
         </div>
 
-
-        <div class="ttons mt-4">
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Text Books</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Stationary</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Uniforms</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Electronics</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Music Equipment</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Sport Accessories</a>
-            </div>
-        </div>
+        {% for category in categories %}
+          <div class="ttons mt-4">
+              <div class="inner">
+                  <a href="#" class="btn btn-dark">{{category}}</a>
+              </div>
+              <div class="inner">
+                  <a href="#" class="btn btn-dark">{{category}}</a>
+              </div>
+              <div class="inner">
+                  <a href="#" class="btn btn-dark">{{category}}</a>
+              </div>
+              <div class="inner">
+                  <a href="#" class="btn btn-dark">{{category}}</a>
+              </div>
+              <div class="inner">
+                  <a href="#" class="btn btn-dark">Music Equipment</a>
+              </div>
+              <div class="inner">
+                  <a href="#" class="btn btn-dark">Sport Accessories</a>
+              </div>
+          </div>
+        {% endfor %}
 
     </div>
 </section>
