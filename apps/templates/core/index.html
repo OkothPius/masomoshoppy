@@ -33,45 +33,23 @@
 </h2>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.category.name == 'Book' %}
+    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark btn-rounded"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
+    
+    {% endif %}
+    {% endfor %}
 </div>
 
 <!-- Electronics -->
@@ -85,55 +63,39 @@
 </div>
 
 <h2 class="md text-center my-2">
-    Trending Electronics 
+    Trending Electronics
 </h2>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.category.name == 'Electronic' %}
+    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark btn-rounded"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
+    
+    {% endif %}
+    {% endfor %}
 </div>
 
-<section class="cloud">
-    <div class="container grid">
-        <img src="{% static '/images/book.jpeg' %}" class="img-fluid" alt="book">
-        <img src="{% static '/images/stationary.jpg' %}" class="img-fluid" alt="Stationary">
+<section class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <img src="{% static '/images/book.jpeg' %}" class="img-fluid" alt="book">
+            </div>
+            <div class="col-4">
+                <img src="{% static '/images/stationary.jpg' %}" class="img-fluid" alt="Stationary">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -152,48 +114,26 @@
 </h2>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.category.name == 'Uniform' %}
+    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark btn-rounded"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
+    
+    {% endif %}
+    {% endfor %}
 </div>
 
-<!-- Stationery -->
+<!-- Stationary -->
 <div class="flex list-inline">
     <div class="inner m-4">
         <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
@@ -208,48 +148,23 @@
 </h2>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.category.name == 'Stationary' %}
+    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural
-                    lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark btn-rounded"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural
-                    lead-in to
-                    additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural
-                    lead-in to
-                    additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
+    
+    {% endif %}
+    {% endfor %}
 </div>
 
 <!-- Music Equipment -->
@@ -267,54 +182,35 @@
 </h2>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.category.name == 'Equipment' %}
+    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural
-                    lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark btn-rounded"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural
-                    lead-in to
-                    additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural
-                    lead-in to
-                    additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
+    
+    {% endif %}
+    {% endfor %}
 </div>
 
-<section class="cloud">
-    <div class="container grid">
-        <img src="{% static '/images/shipping.jpg' %}" class="img-fluid" alt="book">
-        <img src="{% static '/images/discount.jpg' %}" class="img-fluid" alt="Stationary">
+<section class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <img src="{% static '/images/shipping.jpg' %}" class="img-fluid" alt="book">
+            </div>
+            <div class="col-4">
+                <img src="{% static '/images/discount.jpg' %}" class="img-fluid" alt="Stationary">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -333,48 +229,23 @@
 </h2>
 
 <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.category.name == 'Equipment' %}
+    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a
-                    natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark btn-rounded"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a
-                    natural lead-in to
-                    additional content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a
-                    natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-            </div>
-        </div>
-    </div>
+    
+    {% endif %}
+    {% endfor %}
 </div>
 
 {% endblock %}
