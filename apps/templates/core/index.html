@@ -1,5 +1,6 @@
 {% extends "base/base.html" %}
 {% load static %}
+{% load core_extras %}
 {% block content %}
 
 <section class="category">
@@ -18,136 +19,116 @@
 
 
 <!-- Books -->
-<section class="languages mt-3">
-    <div class="flex list-inline">
-        <div class="inner m-4">
-            <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
-        </div>
-        <div class="inner m-4">
-            <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
-        </div>
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
     </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Top Selling Books
-    </h2>
+<h2 class="md text-center mb-2">
+    Top Selling Books
+</h2>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
         </div>
     </div>
-</section>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Electronics -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by brand</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
     </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Trending Electronics Products
-    </h2>
+<h2 class="md text-center my-2">
+    Trending Electronics 
+</h2>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
         </div>
     </div>
-</section>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="cloud">
     <div class="container grid">
@@ -157,202 +138,178 @@
 </section>
 
 <!-- Uniforms -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by school</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
     </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Uniforms
-    </h2>
+<h2 class="md text-center my-2">
+    Uniforms Products
+</h2>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
         </div>
     </div>
-</section>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Stationery -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by brand</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
     </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Stationery
-    </h2>
+<h2 class="md text-center my-2">
+    Stationery Products
+</h2>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
         </div>
     </div>
-</section>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to
+                    additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to
+                    additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Music Equipment -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by brand</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
     </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Music Equipment
-    </h2>
+<h2 class="md text-center my-2">
+    Music Equipment
+</h2>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
         </div>
     </div>
-</section>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to
+                    additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural
+                    lead-in to
+                    additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class="cloud">
     <div class="container grid">
@@ -362,69 +319,62 @@
 </section>
 
 <!-- Sports Equipment -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by grade</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by grade</a>
     </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Sports Equipment
-    </h2>
+<h2 class="md text-center my-2">
+    Sports Equipment
+</h2>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a
+                    natural lead-in to
+                    additional content. This content is a little bit longer.</p>
             </div>
         </div>
     </div>
-</section>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a
+                    natural lead-in to
+                    additional content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a
+                    natural lead-in to
+                    additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
