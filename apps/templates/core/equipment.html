@@ -2,453 +2,191 @@
 {% load static %}
 {% block content %}
 
-<!-- Buttons -->
-<section class="showcase-search">
-    <div class="container">
-        <div class="search-case">
-            <form action="/form/submit" method="GET">
-                <input type="text" name="text" class="search" placeholder="Search here!">
-                <input type="submit" name="submit" class="submit" value="Search">
-            </form>
-        </div>
+<h2 class="md text-center my-2">
+    Equipment
+</h2>
 
-
-        <div class="ttons mt-4">
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Text Books</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Stationary</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Uniforms</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Electronics</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Music Equipment</a>
-            </div>
-            <div class="inner">
-                <a href="#" class="btn btn-dark">Sport Accessories</a>
-            </div>
-        </div>
-
+<section class="category">
+    <div class="mt-3">
+        <ul class="list-inline text-center">
+            {% for type in types %}
+            <li class="list-inline-item"><a class="btn btn-dark rounded-pill" href="#">{{type}}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </section>
 
-<div class="container banner">
-    <img src="{% static '/images/banner.png' %}" alt="image">
+<div class="container ">
+    <img src="{% static '/images/stationary.jpg' %}" class="img-fluid" alt="image">
 </div>
 
-<!-- Books -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by grade</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
+<!-- Singing and Performance -->
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by most popular</a>
+    </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
+
+<h3 class="text-center mt-3">
+    Singing and Performance
+</h3>
+
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.type.name == 'Singing and Performance' %}
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
+            </div>
         </div>
     </div>
 
-    <h2 class="md text-center my-2">
-        Top Selling Books
-    </h2>
+    {% endif %}
+    {% endfor %}
+</div>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<!-- Percussion Instruments -->
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Subject</a>
+    </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
+    </div>
+</div>
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<h3 class="text-center mt-3">
+    Percussion Instruments
+</h3>
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.type.name == 'Percussion Instruments' %}
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Book Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Electronics -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by brand</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<!-- Track & Field -->
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Form</a>
+    </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Subject</a>
+    </div>
+</div>
+
+<h3 class="text-center mt-3">
+    Track & Field
+</h3>
+
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.type.name == 'Track & Field' %}
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
+            </div>
         </div>
     </div>
 
-    <h2 class="md text-center my-2">
-        Trending Electronics Products
-    </h2>
+    {% endif %}
+    {% endfor %}
+</div>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<!-- Hockey -->
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Form</a>
+    </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Subject</a>
+    </div>
+</div>
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<h3 class="text-center mt-3">
+    Hockey
+</h3>
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.type.name == 'Hockey' %}
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Product</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-</section>
 
-<section class="cloud">
-    <div class="container grid">
-        <img src="{% static '/images/book.jpeg' %}" alt="book">
-        <img src="{% static '/images/stationary.jpg' %}" alt="Stationary">
+    {% endif %}
+    {% endfor %}
+</div>
+
+<!-- Football -->
+<div class="flex list-inline">
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by most popular</a>
     </div>
-</section>
-
-<!-- Uniforms -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by school</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
+    <div class="inner m-4">
+        <a href="#" class="btn btn-dark float-end m-2">Sort by Price</a>
     </div>
+</div>
 
-    <h2 class="md text-center my-2">
-        Uniforms
-    </h2>
+<h3 class="text-center mt-3">
+    Football
+</h3>
 
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.type.name == 'Football' %}
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Uniforms</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Stationery -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by brand</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
-    </div>
-
-    <h2 class="md text-center my-2">
-        Stationery
-    </h2>
-
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Stationery</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Music Equipment -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by brand</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
-    </div>
-
-    <h2 class="md text-center my-2">
-        Music Equipment
-    </h2>
-
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cloud">
-    <div class="container grid">
-        <img src="{% static '/images/shipping.jpg' %}" alt="book">
-        <img src="{% static '/images/discount.jpg' %}" alt="Stationary">
-    </div>
-</section>
-
-<!-- Sports Equipment -->
-<section class="languages">
-    <div class=" container flex sort">
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by grade</a>
-        </div>
-        <div class="inner">
-            <a href="#" class="btn btn-dark">Sort by Price</a>
-        </div>
-    </div>
-
-    <h2 class="md text-center my-2">
-        Sports Equipment
-    </h2>
-
-    <div class="row flex my-4">
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Equipment</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+    {% endif %}
+    {% endfor %}
+</div>
 {% endblock %}
