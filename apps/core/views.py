@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from apps.cart.forms import CartAddProductForm
 from .models import Category, Product, Type
 
+# Products
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
@@ -13,6 +14,64 @@ def product_list(request, category_slug=None):
     context = {'category': category, 'categories': categories,
                 'products': products, 'types': types}
     return render(request, 'core/index.html', context)
+
+# Books
+def book(request, category_slug=None):
+    Category = None
+    products = Product.objects.filter(available=True)
+    types = Type.objects.all()
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = products.filter(category=category)
+    context = {'category': category, 'categories': categories,
+                'products': products, 'types': types}
+    return render(request, 'core/books.html', context)
+
+#Uniforms
+def uniform(request):
+    products = Product.objects.filter(available=True)
+    types = Type.objects.all()
+    # if category_slug:
+    #     category = get_object_or_404(Category, slug=category_slug)
+    #     products = products.filter(category=category)
+    context = {'products': products, 'types': types}
+    return render(request, 'core/uniforms.html', context)
+
+# Stationary
+def stationary(request, category_slug=None):
+    Category = None
+    products = Product.objects.filter(available=True)
+    types = Type.objects.all()
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = products.filter(category=category)
+    context = {'category': category, 'categories': categories,
+                'products': products, 'types': types}
+    return render(request, 'core/stationary.html', context)
+
+# Electronics
+def electronic(request, category_slug=None):
+    Category = None
+    products = Product.objects.filter(available=True)
+    types = Type.objects.all()
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = products.filter(category=category)
+    context = {'category': category, 'categories': categories,
+                'products': products, 'types': types}
+    return render(request, 'core/electronics.html', context)
+
+# Equipments
+def equipment(request, category_slug=None):
+    Category = None
+    products = Product.objects.filter(available=True)
+    types = Type.objects.all()
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        products = products.filter(category=category)
+    context = {'category': category, 'categories': categories,
+                'products': products, 'types': types}
+    return render(request, 'core/equipment.html', context)
 
 
 # def product_detail(request, id, slug):
