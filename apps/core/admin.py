@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Category, Product, Type
+from .models import (Category, Type, Book, Stationary,
+                    Uniform, Electronic, Equipment
+                    )
 
-#register
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug']
@@ -11,7 +12,35 @@ class CategoryAdmin(admin.ModelAdmin):
 class TypeAdmin(admin.ModelAdmin):
     list_display = ['name']
 
-@admin.register(Product)
+@admin.register(Book)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'price', 'available', 'created']
+    list_filter = ['available', 'created', 'updated']
+    list_editable = ['price', 'available']
+    prepopulated_fields = {'slug': ('name',)}
+
+@admin.register(Stationary)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'price', 'available', 'created']
+    list_filter = ['available', 'created', 'updated']
+    list_editable = ['price', 'available']
+    prepopulated_fields = {'slug': ('name',)}
+
+@admin.register(Uniform)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'price', 'available', 'created']
+    list_filter = ['available', 'created', 'updated']
+    list_editable = ['price', 'available']
+    prepopulated_fields = {'slug': ('name',)}
+
+@admin.register(Electronic)
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'price', 'available', 'created']
+    list_filter = ['available', 'created', 'updated']
+    list_editable = ['price', 'available']
+    prepopulated_fields = {'slug': ('name',)}
+
+@admin.register(Equipment)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'price', 'available', 'created']
     list_filter = ['available', 'created', 'updated']
