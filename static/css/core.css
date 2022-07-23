@@ -14,6 +14,7 @@ body {
 	line-height: 1.6;
 }
 
+/* Footer */
 #footer {
     background: #404040;
     padding: 0 0 30px 0;
@@ -182,3 +183,48 @@ body {
     font-size: 13px;
     color: #fff
 }
+
+/* Reviews Section */
+body{
+    background-color:#eef3f4;    
+    }
+    
+    .height-100{
+        height:100vh;
+    }
+    
+    .card{
+        width:380px;
+        border:none;
+        height:280px;
+    }
+    
+    .ratings{
+        margin-right:10px;
+    }
+    
+    .ratings i{
+        
+        color:#cecece;
+        font-size:32px;
+    }
+    
+    .rating-color{
+        color:#fbc634 !important;
+    }
+    
+    .review-count{
+        font-weight:400;
+        margin-bottom:2px;
+        font-size:24px !important;
+    }
+    
+    .small-ratings i{
+      color:#cecece;   
+    }
+    
+    .review-stat{
+        font-weight:300;
+        font-size:18px;
+        margin-bottom:2px;
+    }
