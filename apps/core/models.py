@@ -59,4 +59,4 @@ class Product(models.Model):
     #     return 'category type'
 
     def get_absolute_url(self):
-        return reverse('core:index')
+        return reverse('core:uniforms_list')
