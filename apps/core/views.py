@@ -53,6 +53,11 @@ def equipment(request, category_slug=None):
     return render(request, 'core/equipment.html', context)
 
 
+def product_detail(request, id, slug):
+    product = get_object_or_404(Product, id=id, slug=slug, available=True)
+    context = {'product': product}
+    return render(request, 'core/product_detail.html', context)
+
 
 # def product_detail(request, id, slug):
 #     product = get_object_or_404(Product, id=id, slug=slug, available=True)
