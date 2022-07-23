@@ -55,8 +55,5 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    # def type():
-    #     return 'category type'
-
     def get_absolute_url(self):
-        return reverse('core:uniforms_list')
+        return reverse('core:product_detail', args=[self.id, self.slug])
