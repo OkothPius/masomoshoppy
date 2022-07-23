@@ -1,0 +1,68 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Product Description -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card h-100">
+                <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">Kshs. {{product.price}}
+                    </p>
+                    <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h5 class="card-title">{{product.name}}</h5>
+            <h2 class="">{{product.size}}</h2>
+            <h2>Reviews</h2>
+            <div class="small-ratings">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+
+            <div class="small-ratings">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star"></i>
+            </div>
+
+            <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add Review</button>
+        </div>
+    </div>
+</div>
+
+<h1 class="text-center m-4" style="color: green;">Mpesa pay accepted</h1>
+
+<!-- Similar products -->
+<h1 class="text-center">Similar Added products</h1>
+
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    {% for product in products %}
+    {% if product.type.name == 'Girls Uniform' %}
+
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Kshs. {{product.price}}
+                </p>
+                <button type="button" class="btn btn-dark rounded-pill"><a href="#"></a>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
