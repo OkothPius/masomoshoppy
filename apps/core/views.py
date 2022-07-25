@@ -56,6 +56,7 @@ def equipment(request, category_slug=None):
 def product_detail(request, id, slug):
     products = Product.objects.all()
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
-    context = {'product': product, 'products':products,}
+    cart_product_form = CartAddProductForm()
+    context = {'product': product, 'products':products,'cart_product_form': cart_product_form}
     return render(request, 'core/product_detail.html', context)
 
