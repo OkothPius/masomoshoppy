@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'apps.coupon',
 
     'crispy_forms',
+    "bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = '/media/'
+
+#Crispy templates for form rendering
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 CART_SESSION_ID = 'cart'
 
