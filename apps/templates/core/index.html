@@ -39,12 +39,11 @@
     Top Selling Books
 </h2>
 
-<div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-3 m-4 p-3">
     {% for product in products %}
     {% if product.category.name == 'Book' %}
-
     <div class="col">
-        <div class="card h-100">
+        <div class="card p-3 h-100">
             <a href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" class="card-img-top" alt="..."></a>
             <div class="card-body">
                 <h5 class="card-title">{{product.name}}</h5>
